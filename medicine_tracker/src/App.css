@@ -1,0 +1,97 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+:root {
+  --topbar-height: 20vh;
+  --tile-height: 10vh;
+}
+input[type="radio"] {
+  display: none;
+  margin: 0;
+  padding: 0;
+}
+.App {
+  background-color: aqua;
+}
+
+.title {
+  color: white;
+  font-size: 50px;
+  position: absolute;
+  align-self: center;
+}
+.topbar {
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+  height: var(--topbar-height);
+  background-color: red;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+.tile {
+  margin: 20px;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  background-color: black;
+  color: white;
+  height: var(--tile-height);
+  border-radius: 20px;
+  padding: 10px;
+  position: relative;
+  font-size: calc(0.3 * var(--tile-height));
+
+  transition: height 200ms ease-out;
+  overflow: hidden;
+}
+input[type="radio"]:checked + label .tile {
+  height: 40vh;
+  overflow-y: scroll;
+}
+.title-2 {
+  position: relative;
+  font-size: calc(0.5 * var(--tile-height));
+}
+.title-3 {
+  font-size: calc(0.3 * var(--tile-height));
+  position: relative;
+  font-weight: bold;
+  bottom: calc(0.05 * var(--tile-height));
+}
+
+.name {
+  font-size: 30px;
+  align-self: flex-start;
+  padding-bottom: 10px;
+}
+.floatingActionButton {
+  height: 70px;
+  width: 70px;
+  border-radius: 35px;
+  background-color: white;
+  right: 30px;
+  bottom: 30px;
+  position: fixed;
+}
+::-webkit-scrollbar {
+  width: 2px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+  border-right: 1px solid var(--grey);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--grey);
+}
+::-webkit-scrollbar-track-piece:end {
+  background: transparent;
+}
+
+::-webkit-scrollbar-track-piece:start {
+  background: transparent;
+}

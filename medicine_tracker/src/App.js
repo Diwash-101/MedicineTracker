@@ -19,8 +19,25 @@ function App() {
   ]);
 
   const radioHandler = (status) => {
-    setisChecked(status);
+    if (isChecked == status) {
+      setisChecked(-1);
+    } else {
+      setisChecked(status);
+    }
   };
+
+  const menu = (medicine) => {
+    <div className="disc">
+      {medicine.key}
+      <br />
+      <br />
+      Inventory / add new package <br /> <br />
+      Intake Time <br />
+      <br />
+      Intake Frequency <br /> <br /> <br />
+    </div>;
+  };
+
   const motionValue = useMotionValue(1);
 
   const MedicineList = medicines.map((medicine, i) => (
